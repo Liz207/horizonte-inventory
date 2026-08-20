@@ -1,0 +1,80 @@
+2026-08-20 20:05:35 INFO Application started
+2026-08-20 20:05:35 INFO Escuchando en http://0.0.0.0:8080
+2026-08-20 20:05:35 INFO Database connection OK (horizonte_app@localhost:5432/horizonte)
+2026-08-20 20:05:38 INFO Request GET /health -> 200 (127.0.0.1)
+2026-08-20 20:05:38 INFO Request GET /health -> 200 (127.0.0.1)
+2026-08-20 20:05:50 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:05:52 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:05:52 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:05:55 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:05:57 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:05:57 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:05:57 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:05:58 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:05:58 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:06:00 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:06:02 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:06:02 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:06:02 INFO Request GET /productos/nuevo -> 200 (10.0.2.2)
+2026-08-20 20:06:03 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:06:03 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:06:29 WARNING Registro rechazado: Ya existe un producto con el codigo BOOK-002.
+2026-08-20 20:06:29 INFO Request POST /productos/nuevo -> 400 (10.0.2.2)
+2026-08-20 20:06:31 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:06:31 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:06:39 INFO Product created: BOOK-091 (lIZ)
+2026-08-20 20:06:39 INFO Request POST /productos/nuevo -> 302 (10.0.2.2)
+2026-08-20 20:06:40 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:06:42 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:06:42 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:06:55 INFO Product deleted: BOOK-091 (lIZ)
+2026-08-20 20:06:55 INFO Request POST /productos/25/eliminar -> 302 (10.0.2.2)
+2026-08-20 20:06:56 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:06:57 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:06:57 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:07:18 INFO Product deleted: BOOK-001 (Cien anos de soledad)
+2026-08-20 20:07:18 INFO Request POST /productos/1/eliminar -> 302 (10.0.2.2)
+2026-08-20 20:07:19 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:07:21 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:07:21 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:07:26 INFO Request GET /productos/2/editar -> 200 (10.0.2.2)
+2026-08-20 20:07:28 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:07:28 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:07:43 INFO Product updated: BOOK-002 (El principito)
+2026-08-20 20:07:43 INFO Request POST /productos/2/editar -> 302 (10.0.2.2)
+2026-08-20 20:07:43 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:07:45 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:07:45 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:07:48 INFO Request GET /productos/nuevo -> 200 (10.0.2.2)
+2026-08-20 20:07:49 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:07:49 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:08:05 INFO Product created: BOOK-001 (La vida de liz)
+2026-08-20 20:08:05 INFO Request POST /productos/nuevo -> 302 (10.0.2.2)
+2026-08-20 20:08:05 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:08:07 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:08:07 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:08:36 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:08:36 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:09:12 ERROR Error interno en /: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-08-20 20:09:12 INFO Request GET / -> 500 (10.0.2.2)
+2026-08-20 20:09:14 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:09:14 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:09:27 ERROR Database connection failed: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-08-20 20:09:27 INFO Request GET /health -> 503 (127.0.0.1)
+2026-08-20 20:09:43 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:09:43 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:09:50 INFO Request GET /health -> 200 (127.0.0.1)
+2026-08-20 20:10:11 INFO Request GET / -> 200 (10.0.2.2)
+2026-08-20 20:10:13 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:10:13 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:10:42 WARNING Ruta no encontrada: /index.php/apps/files/preview-service-worker.js
+2026-08-20 20:10:42 INFO Request GET /index.php/apps/files/preview-service-worker.js -> 404 (10.0.2.2)
+2026-08-20 20:11:05 INFO Application started
+2026-08-20 20:11:05 INFO Escuchando en http://0.0.0.0:8080
+2026-08-20 20:11:06 INFO Database connection OK (horizonte_app@localhost:5432/horizonte)
+2026-08-20 20:11:06 INFO Request GET /health -> 200 (127.0.0.1)
+2026-08-20 20:11:06 INFO Request GET /health -> 200 (127.0.0.1)
