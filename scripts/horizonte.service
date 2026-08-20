@@ -1,0 +1,20 @@
+# Horizonte Inventory - unidad opcional de systemd
+# Copiar a /etc/systemd/system/horizonte.service y ajustar User/rutas.
+#   sudo systemctl daemon-reload && sudo systemctl enable --now horizonte
+
+[Unit]
+Description=Horizonte Inventory (Libreria Horizonte S.R.L.)
+After=network.target postgresql.service
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=horizonte
+WorkingDirectory=/home/horizonte/horizonte-inventory/source
+EnvironmentFile=/home/horizonte/horizonte-inventory/.env
+ExecStart=/home/horizonte/horizonte-inventory/venv/bin/python app.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
