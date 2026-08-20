@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<section class="resumen">
+  <div class="dato">
+    <span class="dato__valor">{{ stats.total }}</span>
+    <span class="dato__etiqueta">productos registrados</span>
+  </div>
+  <div class="dato">
+    <span class="dato__valor">{{ stats.disponibles }}</span>
+    <span class="dato__etiqueta">con existencias</span>
+  </div>
+  <div class="dato">
+    <span class="dato__valor dato__valor--alerta">{{ stats.agotados }}</span>
+    <span class="dato__etiqueta">sin existencias</span>
+  </div>
+  <div class="dato">
+    <span class="dato__valor">{{ stats.valor_inventario | colones }}</span>
+    <span class="dato__etiqueta">valor del inventario</span>
+  </div>
+</section>
+
+<section class="filtros">
+  <div class="filtros__grupo" role="group" aria-label="Filtros de inventario">
+    <a class="chip {{ 'chip--activo' if filtro == 'todos' }}"
+       href="{{ url_for('inventario') }}">Todos</a>
+    <a class="chip {{ 'chip--activo' if filtro == 'disponibles' }}"
+       href="{{ url_for('inventario', filtro='disponibles') }}">Disponibles</a>
+    <a class="chip {{ 'chip--activo' if filtro == 'agotados' }}"
+       href="{{ url_for('inventario', filtro='agotados') }}">Sin existencias</a>
+  </div>
+
+  <form class="filtros__form" method="get" action="{{ url_for('inventario') }}">
+    <label class="visualmente-oculto" for="categoria">Categoria</label>
+    <select id="categoria" name="categoria" onchange="this.form.submit()">
+      <option value="">Todas las categorias</option>
+      {% for c in categorias %}
+        <option value="{{ c }}" {% if c == categoria %}selected{% endif %}>{{ c }}</option>
+      {% endfor %}
+    </select>
+
+    <label class="visualmente-oculto" for="q">Buscar</label>
+    <input id="q" type="search" name="q" value="{{ busqueda }}"
+           placeholder="Buscar por nombre o codigo">
+    <button class="boton" type="submit">Buscar</button>
+  </form>
+</section>
+
+{% if productos %}
+<table class="tabla">
+  <caption class="visualmente-oculto">Catalogo de productos</caption>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Categoria</th>
+      <th scope="col" class="der">Precio</th>
+      <th scope="col" class="der">Disponible</th>
+      <th scope="col">Registro</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in productos %}
+    <tr class="{% if p.quantity == 0 %}fila--agotada{% endif %}">
+      <td class="mono">{{ p.id }}</td>
+      <td class="mono">{{ p.code }}</td>
+      <td class="nombre">{{ p.name }}</td>
+      <td>{{ p.category }}</td>
+      <td class="der mono">{{ p.price | colones }}</td>
+      <td class="der">
+        {% if p.quantity == 0 %}
+          <span class="stock stock--agotado">Sin existencias</span>
+        {% elif p.quantity <= 5 %}
+          <span class="stock stock--bajo">{{ p.quantity }} unidades</span>
+        {% else %}
+          <span class="stock stock--ok">{{ p.quantity }} unidades</span>
+        {% endif %}
+      </td>
+      <td class="tenue">{{ p.registered_at | fecha }}</td>
+      <td class="acciones">
+        <a class="enlace" href="{{ url_for('editar_producto', product_id=p.id) }}">Editar</a>
+        <form method="post" action="{{ url_for('eliminar_producto', product_id=p.id) }}"
+              onsubmit="return confirm('Eliminar {{ p.code }}? Esta accion no se puede deshacer.');">
+          <button class="enlace enlace--peligro" type="submit">Eliminar</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="vacio">
+  No hay productos que coincidan con este filtro.
+  <a href="{{ url_for('nuevo_producto') }}">Registrar un producto</a>
+</p>
+{% endif %}
+{% endblock %}

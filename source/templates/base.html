@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Horizonte Inventory{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="barra">
+    <div class="barra__marca">
+      <span class="barra__lomo" aria-hidden="true"></span>
+      <div>
+        <a class="barra__titulo" href="{{ url_for('inventario') }}">Horizonte Inventory</a>
+        <p class="barra__sub">Libreria Horizonte S.R.L. &middot; control de catalogo</p>
+      </div>
+    </div>
+    <nav class="barra__nav">
+      <a href="{{ url_for('inventario') }}">Inventario</a>
+      <a href="{{ url_for('nuevo_producto') }}" class="boton boton--principal">Registrar producto</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+      {% if mensajes %}
+        {% for categoria, texto in mensajes %}
+          <p class="aviso aviso--{{ categoria }}">{{ texto }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% block contenido %}{% endblock %}
+  </main>
+
+  <footer class="pie">
+    <span>ITI-522 &middot; Computacion en la Nube &middot; Universidad Tecnica Nacional</span>
+    <a href="/health">Estado del servicio</a>
+  </footer>
+</body>
+</html>
