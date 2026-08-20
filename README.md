@@ -3,10 +3,10 @@
 Sistema de inventario de **Libreria Horizonte S.R.L.**
 Examen Integral ITI-522 — Computacion en la Nube — Universidad Tecnica Nacional.
 
-| Estudiante 1 | *(nombre y carne)* |
+| Estudiante 1 | *Ingrid Sequeira Blandón* |
 |---|---|
-| **Estudiante 2** | *(nombre y carne)* |
-| **Repositorio** | *(URL publica del repositorio)* |
+| **Estudiante 2** | *Keylin Martinez* |
+| **Repositorio** |https://github.com/Liz207/horizonte-inventory.git|
 
 ---
 
